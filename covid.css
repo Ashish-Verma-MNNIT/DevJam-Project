@@ -1,0 +1,18 @@
+table{
+    width:100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+tr{
+    text-align: center;
+}
+td{
+    border: 1.5px solid black;
+}
+.container{
+    height: 300px;
+    overflow-y: scroll;
+}
+.CovidHeading{
+    text-align: center;
+}
