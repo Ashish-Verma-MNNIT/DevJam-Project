@@ -1,13 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>covidHelp</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- css styles -->
+  <link rel="stylesheet" href="css/styles.css">
+    <!-- bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/5fbb806428.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+
 </head>
+
 <body>
-    Main page..
-    Edit it and push
+
+
+  <section  id="title">
+    <div class="container-fluid bg-img" >
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Covid-Help</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#facility">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#prevention-tips">Prevention tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#stats">Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Organizations">Important links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About-us">About us</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+      <!-- quote thing -->
+      <div class="row">
+        <div class="col-lg-8">
+
+          <h1 class="big-heading">
+            Covid can be defeated only when we come together to help each other.</h1>
+
+          <button type="button" class="btn btn-dark btn-lg sign-button">Sign in</button>
+          <button type="button" class="btn btn-lg btn-outline-light sign-button">Sign up</button>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!--facilities -->
+
+  <section class="white-section" id="facility">
+
+    <div class="container-fluid">
+
+
+      <div class="row">
+        <div class="facility-box col-lg-4">
+           <i class="fas fa-people-carry fa-4x icon"></i>
+            <h3 class="facility-title">Need Help</h3>
+            <p>we are providing financial and medical assitance like essential meds ,injections etc.</p>
+
+        </div>
+
+        <div class="facility-box col-lg-4">
+
+          <i class="fas fa-hands-helping fa-4x icon"></i>
+          <h3 class="facility-title">want to do volunteering work</h3>
+          <p>you can help us by providing your time to make arrangement of beds, meds,oxygen etc.</p>
+        </div>
+
+        <div class="facility-box col-lg-4 ">
+        <i class="fas fa-hand-holding-medical fa-4x icon"></i>
+          <h3 class="facility-title">Want to go for donation</h3>
+          <p>you can help us by donating money ,plasma,blood.</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Prevention-tips -->
+
+  <section class="colored-section" id="prevention-tips">
+
+
+    <div id="tips-carousel" class="carousel slide" data-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item container-fluid active">
+          <h2 class="tips-text"><strong>Prevention-tips</strong><br> Wash hands frequently.</h2>
+          <img class="tips-image" src="images/handwash.jpg" alt="dog-profile">
+          <em>as per WHO guidelines</em>
+    </div>
+
+    <div class="carousel-item container-fluid">
+      <h2 class="tips-text"><strong>Prevention-tips<br>Maintain social distancing</strong></h2>
+      <img class="tips-image" src="images/distance.jpg" alt="lady-profile">
+      <em>as per WHO guidelines</em>
+    </div>
+
+    <div class="carousel-item container-fluid">
+      <h2 class="tips-text"><strong>Prevention-tips<br>wear a mask when step out.</strong></h2>
+      <img class="tips-image" src="images\twitter_branded.png" alt="lady-profile">
+      <em>as per WHO guidelines</em>
+    </div>
+
+    <div class="carousel-item container-fluid">
+      <h2 class="tips-text"><strong>Prevention-tips<br>Continously sanitize hands </strong></h2>
+      <img class="tips-image" src="images/hand_sanitizing_1065.jpg" alt="lady-profile" width="70%">
+      <em>as per WHO guidelines</em>
+    </div>
+
+
+
+
+  </div>
+  <a class="carousel-control-prev" href="#tips-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#tips-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+  </section>
+
+
+<!-- stats -->
+
+<section class="white-section" id="stats">
+  <div>
+    <center>
+      stats<br>
+      will<br>
+      be<br>
+      here<br>
+    </center>
+  </div>
+
+</section>
+
+
+
+  <!-- Important links -->
+
+  <section class="colored-section" id="Organizations">
+
+    <div class="image-links">
+      <h2>Important Organizations</h2>
+      <div class="Organizations-row">
+      <a href="https://www.who.int/"> <img class="who-pic" src="images/who-emblem.png" alt="who-pic" ></a>
+        <h3>World Health Organizations</h3>
+        <p>
+          write something about who here
+        </p>
+
+      </div>
+      <div class="Organizations-row">
+        <a href="https://www.mha.gov.in/"><img class="mha-pic" src="images\Ministry-of-Home-Affairs.png" alt="mha-pic" ></a>
+        <h3>Ministry-of-Home-Affairs</h3>
+        <p>
+          write something about this here
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Footer/about-us -->
+
+  <footer class="white-section" id="About-us">
+    <div class="container-fluid">
+
+      <p>
+        In hour of need, always here to help you.
+
+      </p>
+
+
+
+      <p>© CodeChamps MNNIT</p>
+
+    </div>
+  </footer>
+
+
 </body>
+
 </html>
