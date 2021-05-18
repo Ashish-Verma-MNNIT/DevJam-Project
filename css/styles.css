@@ -160,3 +160,29 @@ p {
   padding: 20px;
   padding-top: 40px;
 }
+
+      /* COVID stats styling starts here */
+table{
+  width:100%;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+tr{
+  text-align: center;
+}
+td{
+  border: 1.5px solid black;
+}
+.CovidContainer{
+  background-color:#ff4c68;
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  margin:50px 4px;
+}
+.CovidHeading{
+  margin: 10px auto;
+  text-align: center;
+}
+
+               /* covid stats styling ended here */
