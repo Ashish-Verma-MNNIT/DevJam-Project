@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Needy forms</title>
+</head>
+<style>
+    body {
+        background-image: url(/img.png);
+        background-size: cover;
+        opacity: .7;
+
+
+    }
+
+    #form {
+        /* border: 2px solid red; */
+        justify-content: center;
+        align-items: center;
+        margin: 50px 50 px;
+        /* background-image: url(/photo-1609621472826-42ee89c0dc44.jpg); */
+        background-repeat: no-repeat;
+        opacity: .9;
+        background-size: cover;
+        padding: 50px 100PX;
+    }
+
+    .form-info {
+        margin: 12px 12px;
+        /* background-color: aqua; */
+        font-size: 20px;
+        font-weight: 1000;
+        font-style: italic;
+        padding: 10px 10px;
+    }
+
+    #primary-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #secondary-heading {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+    }
+
+    #submit {
+        justify-content: center;
+        align-items: center;
+        background-color: darkkhaki;
+        font-size: 20px;
+        margin-left: 400px;
+        border: 3px solid darkred;
+        border-radius: 10px;
+        padding: 5px 5px;
+        margin-right: 50px;
+    }
+
+    #reset {
+        justify-content: center;
+        align-items: center;
+        background-color: darkkhaki;
+        font-size: 20px;
+        /* margin-left: 400px; */
+        border: 3px solid darkred;
+        border-radius: 10px;
+        padding: 5px 5px;
+
+    }
+
+    #submit:hover {
+        background-color: deepskyblue;
+        color: white
+    }
+
+    #reset:hover {
+        background-color: deepskyblue;
+        color: white
+    }
+</style>
+
+<body>
+    <h1 id="primary-heading">-:NEEDY DETAILS:-</h1>
+    <div id="form">
+        <h3 id="secondary-heading">Please fill the below details for your request</h3>
+        <form action="#">
+            <div class="form-info">
+                Name : <input type="text" placeholder="Donar's name">
+
+            </div>
+            <div class="form-info">
+                Father's Name : <input type="text" placeholder="Donar's father's name">
+            </div>
+            <div class="form-info">
+                Aadhar number : <input type="number" placeholder="aadhar number">
+            </div>
+            <div class="form-info">
+                Gender : <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+
+
+            <div class="form-info">
+                Tick on what you want to donate :
+                <input type="checkbox" id="Medicine" value="Medicine">
+                <label for="Medicine"> Medicine</label><br>
+                <input type="checkbox" id="Oxygen" value="Oxygen cylinder's">
+                <label for="oxygen">Oxygen cylinder's</label><br>
+                <input type="checkbox" id="Equipments" value="Equipments">
+                <label for="Equipments">Equipments</label><br>
+                Provide Details :<input type="text" placeholder="Aid's details">
+            </div>
+            <div class="form-info">
+                Contact Details:<br>
+                Mobile number : <input type="number">
+                Whatsapp number :<input type="number"><br>
+                Email : <input type="email" placeholder="Enter Email here">
+            </div>
+            <div class="form-info">
+                Address : <input type="text" placeholder="Address(where  aids needed)">
+            </div>
+            <div class="form-info">
+                State:
+                <select name="state" id="state">
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-info">
+                <button type="submit" id="submit" value="Submit">Submit</button>
+                <button type="reset" id="reset" value="Reset">Reset</button>
+
+            </div>
+            <div class="form-info"></div>
+
+    </div>
+
+    </form>
+    </div>
+
+</body>
+
+</html>
