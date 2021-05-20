@@ -1,17 +1,21 @@
 html{
     font-family: monospace;
     font-size: 20px;
-    background-color: rgb(243, 95, 95);
+    background-color: #9ddfd3;
 }
 
 .heading{
     text-align: center;
     font-size: 2rem;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bolder;
 }
 .field{
     text-align: center;
     margin: 3rem;
     padding: 5rem 0;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bolder;
 }
 .RedirectBtn{
     text-align: center;
