@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registration</title>
+		<link rel="stylesheet" href="./RegStyle.css">
+	</head>
+	<body>
+		<h1 class="heading">Registration</h1>
+		<form id="reg-form">
+			<fieldset class="field">Fill your credentials here..<br>
+			<input type="email" autocomplete="on" id="email" name="email" placeholder="email" /><br>
+			<input type="password" autocomplete="on" id="password" name="password" placeholder="Password" /><br>
+			<input type="submit" value="Register" />
+		</fieldset>
+		</form>
+		 <button class="RedirectBtn"><a href="/toLogin"> already registered? Login</a></button>
+		<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+				async function registerUser(event) {
+				event.preventDefault()
+				const email = document.getElementById('email').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						email,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+body {
+  font-family: 'Montserrat-medium', sans-serif;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat-Black', sans-serif;
+}
+
+
+
+p {
+  color: #8F8F8F;
+}
+
+
+/* containers */
+
+#title .container-fluid{
+  text-align: left;
+  padding: 3% 15% 7%;
+}
+
+
+
+.container-fluid {
+  padding: 7% 12%;
+}
+/* heading-section */
+
+.big-heading{
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: bolder;
+  color: white;;
+  border-color: black;
+  border-width: thick;
+  background-color: #0a043c;
+  padding: 1rem;
+}
+
+
+
+.bg-img{
+  background-image: url('https://www.narayanahealth.org/blog/wp-content/uploads/2020/09/70-scaled.jpg')
+}
+
+
+/* navigation bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu';
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-light";
+}
+
+/* signin/up buttons */
+.sign-button {
+  margin: 5% 3% 5% 0;
+}
+
+
+
+.facility-box {
+
+  padding: 5%;
+}
+
+
+
+.facility-title{
+  font-weight: 700;
+  font-size: 1.5rem;
+
+}
+
+.icon {
+  color:#e40017 ;
+  margin-bottom: 1rem;
+}
+
+
+.icon:hover {
+  color:#ff8882 ;
+}
+
+
+/* prevention tips */
+
+.tips-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.tips-image {
+  border-radius: 100%;
+  margin: 20px;
+  width: 70%;
+}
+
+
+
+
+
+
+  #title {
+    text-align: center;
+  }
+
+
+/* colors */
+
+.colored-section{
+  background-color: #ff4c68;
+  color: white;
+}
+
+.white-section{
+  background-color: white;
+}
+
+
+
+.who-pic{
+  float:left;
+  width:25%;
+  margin-right: 30px;
+
+}
+.mha-pic{
+  margin-left: 30px;
+  float: right;
+  width:25%;
+}
+
+
+
+.Organizations-row{
+  width:50%;
+  margin: 100px auto 100px auto;
+  text-align:left;
+
+}
+
+#Organizations{
+  text-align:center;
+  margin:auto;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+      /* COVID stats styling starts here */
+table{
+  width:100%;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+tr{
+  text-align: center;
+}
+td{
+  border: 1.5px solid black;
+}
+.CovidContainer{
+  background-color:white;
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  margin:20px 4px;
+}
+
+.CovidContainer2{
+  background-color:#ff4c68;
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  margin:20px 4px;
+}
+.CovidHeading{
+  margin: 10px auto;
+  text-align: center;
+}
+
+               /* covid stats styling ended here */
+
+/* footer section */
+
+.footer-section{
+  background-color: #a4ebf3;
+  color: white;
+
+}

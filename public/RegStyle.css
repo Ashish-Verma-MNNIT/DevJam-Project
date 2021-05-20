@@ -1,0 +1,29 @@
+html{
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgb(243, 95, 95);
+}
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+}
+.field{
+    text-align: center;
+    margin: 3rem;
+    padding: 5rem 0;
+}
+.RedirectBtn{
+    text-align: center;
+    padding: 0.25rem;
+}
+.RedirectBtn:hover{
+    cursor: pointer;
+}
+.RedirectBtn a{
+    text-decoration: none;
+}
+input{
+    padding: 0.25rem 0;
+    margin: 0.25rem 0;
+}

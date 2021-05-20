@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Donations</title>
+    <style>
+        body{
+            background-color: rgb(54, 94, 46);
+            color: rgb(243, 243, 234);
+        }
+        #table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 4px;
+        }
+        td, th{
+            border: 2px solid rgb(243, 238, 238);
+            flex: auto;
+            text-align: center;
+        }
+        td a{
+            text-decoration:none;
+            color: rgb(172, 172, 236);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Donations of people..</h1>
+    <table id="table">
+        <tr>
+            <th>Items donated</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Blood Group</th>
+            <th>Gender</th>
+            <th>donation time</th>
+        </tr>
+
+    <%donations.forEach(donation=>{%>
+        <tr>
+        <td><%=donation.what%></td>
+        <td><a href="tel:<%=donation.phone%>"><%=donation.phone%></a> <%=donation.whatsapp%> <a href="mailto:<%=donation.email%>"><%=donation.email%></a></td>
+        <td><%=donation.state%> =>  <%=donation.address%></td>
+        <td><%=donation.bloodGroup%></td>
+        <td><%=donation.gender%></td>
+        <td><%=donation.updatedAt%></td>
+        </tr>
+    <%})%>
+</table>
+
+<cite id="warning">*Don't contact anybody unneccesarily.<br> Let's make a good use of this site.</cite>
+
+    </body>
+</html>
