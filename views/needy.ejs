@@ -92,7 +92,8 @@
 <body>
     <h1 id="primary-heading">-:NEEDY DETAILS:-</h1>
     <div id="form">
-        <h4>You can have a view of all donations <a href="/donar/all">here</a></h4>
+        <h3>Welcome <%=user.name%></h3>
+        <h4>You can have a view of all your needs <a href="/needy/<%=user.email%>">here</a></h4>
         <h3 id="secondary-heading">Please fill the below details for your request</h3>
         <form action="/needy" method="POST">
             <div class="form-info">
@@ -135,7 +136,7 @@
                 Contact Details:<br>
                 Mobile number : <input type="number" name="phone" required>
                 Whatsapp number :<input type="number" name="whatsapp"><br>
-                Email : <input type="email" name="email" placeholder="Enter Email here" >
+                Email : <input type="email" name="email" placeholder="<%=user.email%>" value="<%=user.email%>" readonly >
             </div>
             <div class="form-info">
                 Address : <input type="text" name="address" placeholder="Address(where aids needed)" size="25">

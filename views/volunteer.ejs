@@ -11,7 +11,6 @@
     body {
         background-image: url(images/Volunteerism.jpeg);
         background-size: cover;
-
     }
     #form {
         /* border: 2px solid red; */
@@ -22,9 +21,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 50px 0;
-
     }
-
     .form-info {
         margin: 12px 12px;
         background-color: rgb(0, 255, 255,0.3);
@@ -34,7 +31,6 @@
         font-style: italic;
         padding: 10px 10px;
     }
-
     #primary-heading {
         display: flex;
         justify-content: center;
@@ -43,12 +39,10 @@
         font-size: 40px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-
     #secondary-heading {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 25px;
     }
-
     #submit {
         justify-content: center;
         align-items: center;
@@ -60,7 +54,6 @@
         padding: 5px 5px;
         margin-right: 50px;
     }
-
     #reset {
         justify-content: center;
         align-items: center;
@@ -70,32 +63,26 @@
         border: 3px solid darkred;
         border-radius: 10px;
         padding: 5px 5px;
-
     }
-
     #submit:hover {
         background-color: deepskyblue;
         color: white;
         cursor: pointer;
     }
-
     #reset:hover {
         background-color: deepskyblue;
         color: white;
         cursor: pointer;
     }
-
     .imp-links {
         margin: 50px auto;
     }
-
     .link {
         margin: 15px 15px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         font-size: 15px;
     }
-
     #heading {
         font-size: 25px;
         font-style: italic;
@@ -105,12 +92,12 @@
 
 <body>
     <h1 id="primary-heading">-:COVID-VOLUNTEERS:-</h1>
-    <h2>You can see a list of all volunteers<a href="/volunteer/all">here</a></h2>
+    <h2>You can see a list of all volunteers <a href="/volunteer/all">here</a></h2>
     <div id="form">
         <h3 id="secondary-heading">Thank you for your great step , Please fill the details below:-</h3>
         <form action="/volunteer" method="POST">
             <div class="form-info">
-                Name : <input type="text" placeholder="volunteer's name" name="name" required>
+                Name : <input type="text" placeholder="volunteer's name" name="name" value="<%=user.name%>" readonly>
 
             </div>
             <div class="form-info">
@@ -135,7 +122,7 @@
                 Contact Details:<br>
                 Mobile number : <input type="number" name="phone" placeholder="contact" required>
                 Whatsapp number :<input type="number" name="whatsapp" placeholder="whatsapp"><br>
-                Email : <input type="email" placeholder="Enter Email here" name="email">
+                Email : <input type="email" name="email" placeholder="<%=user.email%>" value="<%=user.email%>" readonly >
             </div>
             <div class="form-info">
                 Address : <input type="text" name="address" placeholder="Address(your address)"><br>

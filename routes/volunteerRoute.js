@@ -1,11 +1,10 @@
 const express=require('express')
 const router=express.Router()
+const {checkUser,checkVolunteer}=require('../middleware/authMiddleware')
 const Volunteer=require('../models/volunteer')
-router.get('/',(req,res)=>{
-    res.render('volunteer')
-})
 
-router.post('/',(req,res)=>{
+
+router.post('/',checkUser,(req,res)=>{
     const volunteer= new Volunteer({
         name: req.body.name,
         age: req.body.age,
@@ -38,4 +37,5 @@ router.get('/all',(req,res)=>{
         console.log(err)
     })
 })
+router.get('/:id',checkVolunteer)
 module.exports=router

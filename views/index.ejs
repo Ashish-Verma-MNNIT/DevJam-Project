@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Covid Help</title>
-  <!-- google font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%-include('./partials/head.ejs')%>
    <!-- for covid stats -->
 <script src="./covid.js" defer></script>
@@ -41,21 +41,24 @@
             <li class="nav-item">
               <a class="nav-link" href="#About-us">About us</a>
             </li>
+              
 
           </ul>
         </div>
       </nav>
-
       <!-- quote thing -->
       <div class="row">
         <div class="col-lg-8">
 
           <h1 class="big-heading">
             Covid can be defeated only when we come together to help each other.</h1>
-
-        <!--  <a href="/toLogin"> <button type="button" class="btn btn-dark btn-lg sign-button">Sign in</button></a>
-         <a href="/register"><button type="button" class="btn btn-lg btn-outline-light sign-button">Sign up</button></a>
- -->
+          <%if(user){%>
+          <br><span style="color: white; font-size: x-large;">Welcome, <%=user.name%></span><br>
+          <a href="/logout"><button type="button" class="btn btn-dark btn-lg sign-button">Log out</button></a>
+          <%}else{%>
+          <a href="/login"> <button type="button" class="btn btn-lg btn-outline-light sign-button">Sign in</button></a>
+         <a href="/register"><button type="button" class="btn btn-dark btn-lg sign-button">Sign up</button></a>
+            <%}%>
         </div>
 
 
@@ -83,7 +86,13 @@
 
         <div class="facility-box col-lg-4">
 
-         <a href="/volunteer"> <i class="fas fa-hands-helping fa-4x icon"></i>
+         <a <%if(user){%>
+           href="/volunteer/<%=user.email%>"
+         <%}else{%>
+           href="/login"
+         <%}%>
+         > 
+         <i class="fas fa-hands-helping fa-4x icon"></i>
           <h3 class="facility-title">Want to do volunteering work</h3></a>
           <p>You can help us by providing your time to make arrangement of beds, meds,oxygen etc.</p>
         </div>
@@ -92,6 +101,26 @@
         <a href="/donar"><i class="fas fa-hand-holding-medical fa-4x icon"></i>
           <h3 class="facility-title">Want to go for donation</h3></a>
           <p>You can help us by donating money, plasma, etc.</p>
+        </div>
+        <div class="row">
+        <div class="facility-box col-lg-4">
+           <a href="/needy/all">
+            <h3 class="facility-title">Show all needs</h3></a>
+            <p>Show the needs of the people around the globe</p>
+
+        </div>
+
+        <div class="facility-box col-lg-4">
+
+         <a href="/volunteer/all">
+          <h3 class="facility-title">List of volunteers registered</h3></a>
+          <p>You can help us by providing your time to make arrangement of beds, meds,oxygen etc.</p>
+        </div>
+
+        <div class="facility-box col-lg-4 ">
+        <a href="/donar/all">
+          <h3 class="facility-title">All donations</h3></a>
+          <p>You can see all donations here</p>
         </div>
 
       </div>

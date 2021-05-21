@@ -12,10 +12,7 @@
     body {
         background-image: url(./images/donar.jpg);
         background-size: cover;
-
-
     }
-
     #form {
         /* border: 2px solid red; */
         justify-content: center;
@@ -27,7 +24,6 @@
         background-size: cover;
         padding: 50px 100PX;
     }
-
     .form-info {
         margin: 12px 12px;
         /* background-color: aqua; */
@@ -36,7 +32,6 @@
         font-style: italic;
         padding: 10px 10px;
     }
-
     #primary-heading {
         display: flex;
         justify-content: center;
@@ -45,12 +40,10 @@
         font-size: 40px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-
     #secondary-heading {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 25px;
     }
-
     #submit {
         justify-content: center;
         align-items: center;
@@ -62,7 +55,6 @@
         padding: 5px 5px;
         margin-right: 50px;
     }
-
     #reset {
         justify-content: center;
         align-items: center;
@@ -72,36 +64,27 @@
         border: 3px solid darkred;
         border-radius: 10px;
         padding: 5px 5px;
-
     }
-
     #submit:hover {
         background-color: deepskyblue;
         color: white;
         cursor: pointer;
     }
-
     #reset:hover {
         background-color: deepskyblue;
         color: white;
         cursor: pointer;
     }
-    #video{
-        line-height: 0PX;
-        margin-left: 200px;
-        height:1000px;
-        width: 1000px;
-    }
 </style>
 
 <body>
-    <h1 id="primary-heading">-:Welcome Dear Donars:-</h1>
+    <h1 id="primary-heading">-:Welcome Dear <%=user.name%>:-</h1>
     <div id="form">
-        <h4>You can have a view of all needs <a href="/needy/all">here</a></h4>
+        <h4>You can have a view of all your donations <a href="/donar/<%=user.email%>">here</a></h4>
         <h3 id="secondary-heading">Please fill the below details for your request</h3>
         <form action="/donar" method="POST">
             <div class="form-info">
-                Name : <input type="text" name="name" placeholder="Donar's name" required>
+                Name : <input type="text" name="name" placeholder="<%=user.name%>" value="<%=user.name%>" readonly>
 
             </div>
             <div class="form-info">
@@ -139,7 +122,7 @@
                 Contact Details:<br>
                 Mobile number : <input type="number" name="phone" required>
                 Whatsapp number :<input type="number" name="whatsapp" ><br>
-                Email : <input type="email" name="email" placeholder="Enter Email here">
+                Email : <input type="email" name="email" placeholder="<%=user.email%>" value="<%=user.email%>" readonly >
             </div>
             <div class="form-info">
                 Address : <input type="text" name="address" placeholder="Address" required>
@@ -195,10 +178,6 @@
     </div>
 
     </form>
-
-
-<!--         <video src="/201211_03_Covid Vaccine_4k_005.mp4" autoplay id="video" > 
-        </video>-->
     
   <%- include('./partials/footer.ejs')%>
 </body>

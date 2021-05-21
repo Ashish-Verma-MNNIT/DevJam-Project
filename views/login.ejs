@@ -4,47 +4,52 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Login</title>
-		<link rel="stylesheet" href="./RegStyle.css">
-	</head>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=KoHo:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./RegStyle.css">	</head>
 	<body>
 		<h1 class="heading">Login</h1>
-		<form id="login">
+		<form id="reg-form">
 			<fieldset class="field">Fill your credentials here..<br>
-			<input type="email" autocomplete="on" id="email" placeholder="email" /><br>
-			<input type="password" autocomplete="on" id="password" placeholder="Password" /><br>
-			<input type="submit" value="Login" />
+			<input type="text" autocomplete="on" id="email" name="email" placeholder="email" /><br>
+			<div class="email error"></div>
+			<input type="password" autocomplete="on" id="password" name="password" placeholder="Password" /><br>
+			<div class="password error"></div>
+			<button>Login</button>
 		</fieldset>
 		</form>
-		<button class="RedirectBtn"><a href="/register"> not registered yet?</a></button>
-		<script>
-			const form = document.getElementById('login')
-			form.addEventListener('submit', login)
+		 <button class="RedirectBtn"><a href="/register">Not registered yet?</a></button>
 
-			async function login(event) {
-				event.preventDefault()
-				const email = document.getElementById('email').value
-				const password = document.getElementById('password').value
-
-				const result = await fetch('/login', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({
-						email,
-						password
+		 <script>
+			 const form=document.querySelector('form')
+			 const emailError= document.querySelector('.email.error')
+			 const passwordError= document.querySelector('.password.error')
+			 form.addEventListener('submit',async (e)=>{
+				e.preventDefault();
+				 emailError.textContent=""
+				 passwordError.textContent=""
+				 const email=form.email.value
+				 const password=form.password.value
+				 try{
+					const res=await fetch('/login',{
+						method:'POST',
+						body: JSON.stringify({email , password}),
+						headers:{'Content-Type':'application/json'}
 					})
-				}).then((res) => res.json())
-
-				if (result.status === 'ok') {
-					// everything went fine
-					console.log('Got the token: ', result.data)
-					localStorage.setItem('token', result.data)
-					window.location.href="/main.html"
-				} else {
-					alert(result.error)
-				}
-			}
-		</script>
+					const data=await res.json();
+					console.log(data)
+					if(data.errors){
+						emailError.textContent=data.errors.email
+						passwordError.textContent=data.errors.password
+					}
+					if(data.user){
+						location.assign('/')
+					}
+				 }
+				 catch(err){
+					 console.log(err)
+				 }
+			 })
+		 </script>
 	</body>
 </html>
