@@ -37,5 +37,7 @@ router.get('/all',(req,res)=>{
         console.log(err)
     })
 })
-router.get('/:id',checkVolunteer)
+router.get('/:id',checkVolunteer,(req,res)=>{
+    res.render('volunteer')
+})
 module.exports=router

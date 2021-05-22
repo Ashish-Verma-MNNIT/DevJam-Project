@@ -42,11 +42,10 @@ const checkUser=(req,res,next)=>{
     }
 }
 
-const checkVolunteer=async (req,res)=>{
+const checkVolunteer=async (req,res,next)=>{
 const isVolunteer=await Volunteer.exists({email:req.params.id})
-if(isVolunteer){
-    res.send('you are already a volunteer')
-}else
-    res.render('volunteer')
+if(isVolunteer)
+    res.render('alreadyVolunteer')
+else    next();
 }
 module.exports={requireAuth,checkUser,checkVolunteer}
