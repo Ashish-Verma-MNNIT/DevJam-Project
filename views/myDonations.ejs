@@ -4,31 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Donations</title>
-    <style>
-        body{
-            background-color: rgb(54, 94, 46);
-            color: rgb(243, 243, 234);
-        }
-        #table{
-            width: 100%;
-            border-collapse: collapse;
-            margin: 4px;
-        }
-        td, th{
-            border: 2px solid rgb(243, 238, 238);
-            flex: auto;
-            text-align: center;
-        }
-        td a{
-            text-decoration:none;
-            color: rgb(172, 172, 236);
-        }
-    </style>
+    <title>My Donations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-color: #ffab73;
+        color: black;
+    }
+    #table{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 4px;
+    }
+    td, th{
+        border: 2px solid black;
+        flex: auto;
+        text-align: center;
+        font-family: 'Patrick Hand', cursive;
+    }
+    td a{
+        text-decoration:none;
+        color: rgb(172, 172, 236);
+    }
+    h1{
+      font-family: 'Indie Flower', cursive;
+    }
+    .button1 {
+                height: 40px;
+                width: 90px;
+                background-color: white;
+                color: black;
+                border: 2px solid #555555;
+                border-radius: 30%;
+                margin: 20px;
+                }
+
+            .button1:hover {
+                background-color: #555555;
+                color: white;
+                cursor: pointer;
+            }
+            .button2 {
+                height: 40px;
+                width: 90px;
+                background-color: white; 
+                color: black; 
+                border: 2px solid #008CBA;
+                border-radius: 40%;
+                margin: 20px;
+                }
+
+            .button2:hover {
+                background-color: #008CBA;
+                color: white;
+                cursor: pointer;
+                }
+</style>
 </head>
 <body>
-    <a href="/"><button>home</button></a><br>
-    <a href="/donar"><button>New donation</button></a>
+    <a href="/"><button class="button1">home</button></a>
+    <a href="/donar"><button class="button2">New donation</button></a>
     <h1 style="text-align: center">My donations</h1>
     <table id="table">
         <tr>

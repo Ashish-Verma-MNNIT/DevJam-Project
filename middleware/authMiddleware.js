@@ -46,7 +46,7 @@ const checkVolunteer=async (req,res)=>{
 const isVolunteer=await Volunteer.exists({email:req.params.id})
 if(isVolunteer){
     res.send('you are already a volunteer')
-}
+}else
     res.render('volunteer')
 }
 module.exports={requireAuth,checkUser,checkVolunteer}
