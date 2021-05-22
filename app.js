@@ -31,7 +31,6 @@ app.get('/',(req,res)=>{
 app.use('/needy',requireAuth,needyRoute)
 app.use('/donar',requireAuth, donarRoute)
 app.use('/volunteer',requireAuth, volunteerRoute)
-app.get('/main',requireAuth,(req,res)=>res.render('main'))
 app.use(authRoute)
 
 app.use((req,res)=>{
